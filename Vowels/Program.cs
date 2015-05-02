@@ -10,7 +10,7 @@ namespace Vowels
     {
         static void Main(string[] args)
         {
-            char[] characters = new char[] { 'a', 'b', 'd', 't', 'y', 'e', 'e', 'c', 'r', 'u', 'i', 'i', 'o', 'o', 'e', '3', 'a' };
+            char[] characters = new char[] { 'a', 'b', 'd', 't', 'y', 'e', 'e', 'c', 'r', 'u', 'i', 'i', 'o', 'o', 'e', 'd', 'a' };
             int number = getNumberofVowels(characters);
             Console.WriteLine(Convert.ToString(number));
             int numberofcons = getNumberofCons(characters);

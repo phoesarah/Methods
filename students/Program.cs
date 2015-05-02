@@ -10,16 +10,39 @@ namespace students
     {
         static void Main(string[] args)
         {
-            int[] scores = new int[] {72, 54, 100, 33, 99, 100, 100, 75, 57, 80, 82, 88, 95, 95};
+            int[] scores = new int[10];
+            Console.WriteLine("Please enter 10 scores, press enter after each number");
+            //get input
+            for (int i = 0; i < scores.Length; i++)
+            {
+                scores[i] = Convert.ToInt32(Console.ReadLine());
+                
+            }
 
             int average = getaverage(scores);
             int highest = gethighest(scores);
             int lowest = getlowest(scores);
+
+            // print out the numbers that were entered
+            Console.Write("You Entered: ");
+            for (int i = 0; i < scores.Length; i++)
+            {
+                Console.Write(" " + scores[i]+ ",");
+
+            }
+            Console.WriteLine();
+
+            //print out result of functions
+
             Console.WriteLine("The class average is: " + Convert.ToString(average));
             Console.WriteLine("The highest score is: " + Convert.ToString(highest));
             Console.WriteLine("The lowest score is: " + Convert.ToString(lowest));
+         
             Console.ReadKey(); 
         }
+       
+        //get average of the numbers in the array
+        
         static int getaverage(int[] arr)
         {
             int sum = 0;
@@ -34,6 +57,8 @@ namespace students
             int average = sum / arr.Length;
             return average;
         }
+
+        //Get the highest number in the array
         static int gethighest(int[] arr)
         {
             int highest = 0;
@@ -50,6 +75,7 @@ namespace students
             return highest;
         }
 
+        //get the lowest number in the array
         static int getlowest(int[] arr)
         {
             int lowest = int.MaxValue;
